@@ -1,4 +1,4 @@
-package Employee;
+package pl.coderslab.Employee;
 
 public class Employee {
     private String name;
