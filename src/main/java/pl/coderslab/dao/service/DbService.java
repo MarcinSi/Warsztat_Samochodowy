@@ -1,4 +1,4 @@
-package pl.coderslab.service;
+package pl.coderslab.dao.service;
 
 import java.sql.*;
 import java.util.ArrayList;
