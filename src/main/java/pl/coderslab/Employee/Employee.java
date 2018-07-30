@@ -18,6 +18,7 @@ public class Employee {
         this.workingHourCost = workingHourCost;
     }
 
+
     public String getName() {
         return name;
     }
