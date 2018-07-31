@@ -4,6 +4,8 @@ import java.util.Date;
 
 public class Car {
 
+
+
     private String model;
     private String brand;
     private Date yearOfProduction;
@@ -37,6 +39,7 @@ public class Car {
         this.brand = brand;
     }
 
+
     public Date getYearOfProduction() {
         return yearOfProduction;
     }
@@ -61,3 +64,4 @@ public class Car {
         this.nextService = nextService;
     }
 }
+
