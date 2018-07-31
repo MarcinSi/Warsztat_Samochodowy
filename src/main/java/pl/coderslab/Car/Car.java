@@ -3,21 +3,24 @@ package pl.coderslab.Car;
 import java.util.Date;
 
 public class Car {
+
+
+
     private String model;
     private String brand;
-    private Date dateOfProduction;
-    private int registrationNumber;
-    private Date nextTechnicalInspectionDate;
+    private Date yearOfProduction;
+    private String licensPlate;
+    private Date nextService;
 
-    public Car() {
-    }
-
-    public Car(String model, String brand, Date dateOfProduction, int registrationNumber, Date nextTechnicalInspectionDate) {
+    public Car(String model, String brand, Date yearOfProduction, String licensPlate, Date nextService) {
         this.model = model;
         this.brand = brand;
-        this.dateOfProduction = dateOfProduction;
-        this.registrationNumber = registrationNumber;
-        this.nextTechnicalInspectionDate = nextTechnicalInspectionDate;
+        this.yearOfProduction = yearOfProduction;
+        this.licensPlate = licensPlate;
+        this.nextService = nextService;
+    }
+    public Car(){
+
     }
 
     public String getModel() {
@@ -36,27 +39,29 @@ public class Car {
         this.brand = brand;
     }
 
-    public Date getDateOfProduction() {
-        return dateOfProduction;
+
+    public Date getYearOfProduction() {
+        return yearOfProduction;
     }
 
-    public void setDateOfProduction(Date dateOfProduction) {
-        this.dateOfProduction = dateOfProduction;
+    public void setYearOfProduction(Date yearOfProduction) {
+        this.yearOfProduction = yearOfProduction;
     }
 
-    public int getRegistrationNumber() {
-        return registrationNumber;
+    public String getLicensPlate() {
+        return licensPlate;
     }
 
-    public void setRegistrationNumber(int registrationNumber) {
-        this.registrationNumber = registrationNumber;
+    public void setLicensPlate(String licensPlate) {
+        this.licensPlate = licensPlate;
     }
 
-    public Date getNextTechnicalInspectionDate() {
-        return nextTechnicalInspectionDate;
+    public Date getNextService() {
+        return nextService;
     }
 
-    public void setNextTechnicalInspectionDate(Date nextTechnicalInspectionDate) {
-        this.nextTechnicalInspectionDate = nextTechnicalInspectionDate;
+    public void setNextService(Date nextService) {
+        this.nextService = nextService;
     }
 }
+
