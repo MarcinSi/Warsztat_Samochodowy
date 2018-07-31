@@ -4,20 +4,18 @@ import java.util.Date;
 
 public class Car {
 
-
-
     private String model;
     private String brand;
-    private Date yearOfProduction;
-    private String licensPlate;
-    private Date nextService;
+    private Date dateOfProduction;
+    private String registrationNumber;
+    private Date nextTechnicalInspectionDate;
 
-    public Car(String model, String brand, Date yearOfProduction, String licensPlate, Date nextService) {
+    public Car(String model, String brand, Date dateOfProduction, String registrationNumber, Date nextTechnicalInspectionDate) {
         this.model = model;
         this.brand = brand;
-        this.yearOfProduction = yearOfProduction;
-        this.licensPlate = licensPlate;
-        this.nextService = nextService;
+        this.dateOfProduction = dateOfProduction;
+        this.registrationNumber = registrationNumber;
+        this.nextTechnicalInspectionDate = nextTechnicalInspectionDate;
     }
     public Car(){
 
@@ -40,28 +38,28 @@ public class Car {
     }
 
 
-    public Date getYearOfProduction() {
-        return yearOfProduction;
+    public Date getDateOfProduction() {
+        return dateOfProduction;
     }
 
-    public void setYearOfProduction(Date yearOfProduction) {
-        this.yearOfProduction = yearOfProduction;
+    public void setDateOfProduction(Date dateOfProduction) {
+        this.dateOfProduction = dateOfProduction;
     }
 
-    public String getLicensPlate() {
-        return licensPlate;
+    public String getRegistrationNumber() {
+        return registrationNumber;
     }
 
-    public void setLicensPlate(String licensPlate) {
-        this.licensPlate = licensPlate;
+    public void setRegistrationNumber(String registrationNumber) {
+        this.registrationNumber = registrationNumber;
     }
 
-    public Date getNextService() {
-        return nextService;
+    public Date getNextTechnicalInspectionDate() {
+        return nextTechnicalInspectionDate;
     }
 
-    public void setNextService(Date nextService) {
-        this.nextService = nextService;
+    public void setNextTechnicalInspectionDate(Date nextTechnicalInspectionDate) {
+        this.nextTechnicalInspectionDate = nextTechnicalInspectionDate;
     }
 }
 
