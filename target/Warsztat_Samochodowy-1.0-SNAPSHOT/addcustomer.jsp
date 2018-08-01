@@ -33,7 +33,8 @@
             <label for="formGroupInputDateOfBirth">Data urodzenia</label>
             <input type="date" class="form-control" id="formGroupInputDateOfBirth" name="dateOfBirth" placeholder="Data urodzenia">
         </div>
-        <button type="submit" class="btn btn-primary mb-2">Prześlij</button>
+
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
      </form>
 </body>
 </html>
