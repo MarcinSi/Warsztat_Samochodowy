@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="alert alert-success" role="alert">
-    <strong>Dodaj klienta</strong>
+    <strong>Dodaj pracownika</strong>
 </div>
 <form>
     <div class="form-group">
