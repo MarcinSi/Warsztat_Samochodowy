@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <!--TODO try to import bootstrap from maven-->
 <!--<link href="webjars/bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet"/>-->
-<link rel="stylesheet" href="style/addcustumorestyle.css">
+<link rel="stylesheet" href="style/formstyle.css">
 
     <title>Dodaj klienta</title>
 </head>
