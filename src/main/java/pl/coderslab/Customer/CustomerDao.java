@@ -9,6 +9,18 @@ import java.util.List;
 
 public class CustomerDao {
 
+    public static void delete (int customerId){
+        String querry = "DELETE FROM customer WHERE id =?";
+        List<String> params = new ArrayList<>();
+        params.add(String.valueOf(customerId));
+
+        try {
+            DbService.executeQuery(querry, params);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void save(Customer customer) throws Exception{
 
         String querry = "Insert INTO customer (`name`, `lastName`, `date_of_birth`) VALUES (?, ?, ?)";

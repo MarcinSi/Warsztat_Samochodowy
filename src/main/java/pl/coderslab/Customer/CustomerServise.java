@@ -12,4 +12,8 @@ public class CustomerServise {
             e.printStackTrace();
         }
     }
+
+    public static void delete(int customerId){
+        CustomerDao.delete(customerId);
+    }
 }
