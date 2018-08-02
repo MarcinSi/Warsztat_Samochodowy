@@ -6,6 +6,7 @@ public class Employee {
     private String address;
     private String note;
     private float workingHourCost;
+    private int id;
 
     public Employee() {
     }
@@ -17,7 +18,13 @@ public class Employee {
         this.note = note;
         this.workingHourCost = workingHourCost;
     }
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
