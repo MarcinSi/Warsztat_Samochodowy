@@ -14,6 +14,9 @@
     <title>Tabela z klientami</title>
 </head>
 <body>
+<div class="alert alert-success" role="alert">
+    <strong>Wyświetlono listę klientów</strong>
+</div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a href="/index.html" class="navbar-link">Strona główna</a>
 </nav>
