@@ -11,8 +11,8 @@ import java.io.IOException;
 public class CustomerServletDel extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int customerId = Integer.parseInt(request.getParameter("id"));
-        
-        CustomerServise.delete(customerId);
+
+        CustomerDao.delete(customerId);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

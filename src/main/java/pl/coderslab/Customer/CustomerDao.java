@@ -2,6 +2,10 @@ package pl.coderslab.Customer;
 
 import pl.coderslab.dao.service.DbService;
 
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,36 +25,45 @@ public class CustomerDao {
         }
     }
 
+
+
     public static void save(Customer customer) throws Exception{
 
-        String querry = "Insert INTO customer (`name`, `lastName`, `date_of_birth`) VALUES (?, ?, ?)";
+        String querry = "Insert INTO customer VALUES (null, ?, ?, ?)";
         List<String> params = new ArrayList<>();
         params.add(customer.getName());
         params.add(customer.getLastName());
-        params.add(String.valueOf(customer.getDateOfBirth()));
+        if(customer.getDateOfBirth()!=null){
 
-        try {
-            int newId = DbService.insertIntoDatabase(querry,params);
-            customer.setId(newId);
-
-        } catch (SQLException e) {
-            e.printStackTrace();
+            params.add(customer.getDateOfBirth());
+        } else {
+            params.add(null);
         }
+        DbService.insertIntoDatabase(querry,params);
+
     }
 
-    public static List<String[]> printAllCustomers(){
+    public static List<Customer> printAllCustomers() throws SQLException{
         String querry ="SELECT * from customer";
-        List<String[]> results = new ArrayList<>();
 
-        try {
-            results = DbService.getData(querry,null);
-            for(String[] result : results){
-                System.out.println(Arrays.toString(result));
+        try(Connection conn = DbService.createConn()){
+            PreparedStatement st = conn.prepareStatement(querry);
+            ResultSet rs = st.executeQuery();
+            List<Customer> customers = new ArrayList<>();
+            while (rs.next()) {
+                int id = rs.getInt(1);
+                String name = rs.getString(2);
+                String lastName = rs.getString(3);
+                String birthday = rs.getString(4);
+                customers.add(new Customer(name, lastName, birthday, id));
             }
+            return customers;
+
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw e;
         }
-        return results;
+
+
 
     }
 }
