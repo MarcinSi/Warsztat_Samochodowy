@@ -36,12 +36,12 @@ public class EmployeeDao {
     }
 
     public static List<Employee> printAllEmployees() throws SQLException {
-        String query = "SELECT * from customer";
+        String query = "SELECT * from employee";
 
         try (Connection conn = DbService.createConn()) {
             PreparedStatement st = conn.prepareStatement(query);
             ResultSet rs = st.executeQuery();
-            List<Employee> customers = new ArrayList<>();
+            List<Employee> employees = new ArrayList<>();
             while (rs.next()) {
                 int id = rs.getInt(1);
                 String name = rs.getString(2);
@@ -49,9 +49,9 @@ public class EmployeeDao {
                 String note = rs.getString(4);
                 float workingHourCost = rs.getFloat(5);
 
-                customers.add(new Employee(id, name, lastName, note, workingHourCost));
+                employees.add(new Employee(id, name, lastName, note, workingHourCost));
             }
-            return customers;
+            return employees;
 
         } catch (SQLException e) {
             throw e;
