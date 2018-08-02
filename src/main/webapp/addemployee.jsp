@@ -31,7 +31,7 @@
     </div>
     <div class="form-group">
         <label for="formGroupInputNote">Notatka</label>
-        <input type="date" class="form-control" id="formGroupInputNote" name="note" placeholder="notatka">
+        <input type="text" class="form-control" id="formGroupInputNote" name="note" placeholder="notatka">
     </div>
     <div class="form-group">
         <label for="formGroupInputWorkingHourCost">Koszt roboczo godziny</label>
