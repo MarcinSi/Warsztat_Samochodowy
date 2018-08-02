@@ -20,7 +20,7 @@
 <div class="alert alert-success" role="alert">
     <strong>Dodaj pracownika</strong>
 </div>
-<form>
+<form action="/addemployee" method="post">
     <div class="form-group">
         <label for="formGroupInputFirstName">Imię</label>
         <input type="text" class="form-control" id="formGroupInputFirstName" name="name" placeholder="Imię" required>
