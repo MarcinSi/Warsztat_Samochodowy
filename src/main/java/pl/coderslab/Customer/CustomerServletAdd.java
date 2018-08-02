@@ -12,20 +12,32 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @WebServlet("/addcustomer")
-public class CustomerServlet extends HttpServlet {
+public class CustomerServletAdd extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         String lastName = request.getParameter("lastName");
-        String DateOfBirth = request.getParameter("DateOfBirth");
+        String date = request.getParameter("dateOfBirth");
 
-        Date dateOfBirth = null;
+//        Date birthday = null;
+//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//        try{
+//            birthday = sdf.parse(date);
+//        } catch (ParseException ignore){
+//
+//        }
+
+        Customer customer = new Customer(name, lastName, date);
+
         try {
-            dateOfBirth = new SimpleDateFormat("MM/dd/yyyy").parse(DateOfBirth);
-        } catch (ParseException e) {
+            CustomerDao.save(customer);
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
-        CustomerServise.add(name, lastName, dateOfBirth);
+
+        //CustomerServise.add(name, lastName, birthday);
+
+        response.sendRedirect("/addcustomer.jsp");
 
     }
 

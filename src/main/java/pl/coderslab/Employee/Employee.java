@@ -1,9 +1,9 @@
 package pl.coderslab.Employee;
 
 public class Employee {
+    private int id;
     private String name;
     private String lastName;
-    private String address;
     private String note;
     private float workingHourCost;
     private int id;
@@ -11,10 +11,10 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(String name, String lastName, String address, String note, float workingHourCost) {
+    public Employee(int id, String name, String lastName, String note, float workingHourCost) {
+        this.id = id;
         this.name = name;
         this.lastName = lastName;
-        this.address = address;
         this.note = note;
         this.workingHourCost = workingHourCost;
     }
@@ -22,6 +22,20 @@ public class Employee {
         return id;
     }
 
+<<<<<<< HEAD
+=======
+    public Employee(String name, String lastName, String note, float workingHourCost) {
+        this.name = name;
+        this.lastName = lastName;
+        this.note = note;
+        this.workingHourCost = workingHourCost;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+>>>>>>> 43b94dc452a9e83f6daa61c87eb70e08d3f47ec3
     public void setId(int id) {
         this.id = id;
     }
@@ -40,14 +54,6 @@ public class Employee {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public String getNote() {

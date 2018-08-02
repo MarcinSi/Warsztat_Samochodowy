@@ -75,7 +75,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES (0,'Pawe≈Ç','Gawron','1990-08-11',0),(1,'Anna','Nowakowska','1981-03-27',1),(2,'Olaf','Nowak','1995-01-07',2);
+INSERT INTO `customer` VALUES (0,'Pawe≥','Gawron','1990-08-11',0),(1,'Anna','Nowakowska','1981-03-27',1),(2,'Olaf','Nowak','1995-01-07',2);
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -102,7 +102,7 @@ CREATE TABLE `employee` (
 
 LOCK TABLES `employee` WRITE;
 /*!40000 ALTER TABLE `employee` DISABLE KEYS */;
-INSERT INTO `employee` VALUES (0,'Adam','Nowak','Katowice, ul. Mickiewicza 12a/7 nr. telefonu 786482001',10),(1,'Tomasz','Kowalski','Sosnowiec, ul. Wolna 54 nr. telefonu 668567123',11),(2,'Piotr','Borek','Katowice, ul. Miko≈Çowska 2b/7 nr. telefonu 721982098',12),(3,'Mateusz','Lech','Mys≈Çowice, ul. Wolnego 4 nr. telefonu 692876432',10),(4,'Tomasz','Nosek','Katowice, ul. Odrodzenia nr. telefonu 712998354',8);
+INSERT INTO `employee` VALUES (0,'Adam','Nowak','Katowice, ul. Mickiewicza 12a/7 nr. telefonu 786482001',10),(1,'Tomasz','Kowalski','Sosnowiec, ul. Wolna 54 nr. telefonu 668567123',11),(2,'Piotr','Borek','Katowice, ul. Miko≥owska 2b/7 nr. telefonu 721982098',12),(3,'Mateusz','Lech','Mys≥owice, ul. Wolnego 4 nr. telefonu 692876432',10),(4,'Tomasz','Nosek','Katowice, ul. Odrodzenia nr. telefonu 712998354',8);
 /*!40000 ALTER TABLE `employee` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -137,7 +137,7 @@ CREATE TABLE `order` (
 
 LOCK TABLES `order` WRITE;
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
-INSERT INTO `order` VALUES (0,'2018-06-06','2018-06-10','2018-06-11','przebita opona','wymiana opony','w naprawie',70.99,64.99,10,0),(1,'2018-06-11','2018-06-11','2018-06-11','problem z silnikiem','naprawa silnika','gotowy do odbioru',212.49,199.99,11,1),(2,'2018-06-13','2018-06-14','2018-06-15','auto po wypadku','naprawa calego samochodu','przyjƒôty',699.99,621.49,12,2);
+INSERT INTO `order` VALUES (0,'2018-06-06','2018-06-10','2018-06-11','przebita opona','wymiana opony','w naprawie',70.99,64.99,10,0),(1,'2018-06-11','2018-06-11','2018-06-11','problem z silnikiem','naprawa silnika','gotowy do odbioru',212.49,199.99,11,1),(2,'2018-06-13','2018-06-14','2018-06-15','auto po wypadku','naprawa calego samochodu','przyjÍty',699.99,621.49,12,2);
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
