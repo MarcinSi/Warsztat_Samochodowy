@@ -35,7 +35,7 @@
     </div>
     <div class="form-group">
         <label for="formGroupInputWorkingHourCost">Koszt roboczo godziny</label>
-        <input type="number" class="form-control" id="formGroupInputWorkingHourCost" name="note" placeholder="koszt roboczo godziny" required>
+        <input type="number" class="form-control" id="formGroupInputWorkingHourCost" name="workingHourCost" placeholder="koszt roboczo godziny" required>
     </div>
     <button type="submit" class="btn btn-primary mb-2">Prześlij</button>
 </form>
